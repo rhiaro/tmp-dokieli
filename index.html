@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+  <head>
+    <title>do</title>
+    <style>
+    body {
+      background-color: #bbb;
+    }
+    #document-menu {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      position: absolute;
+      top: 5px; right: 5px;
+      width: 400px;
+    }
+    aside.do {
+      background-color: #fff;
+      width: 600px;
+      position: absolute; top: 5px; left: 50%;
+      transform:translate(-50%, 0);
+    }
+    </style>
+  </head>
+  <body>
+    <h1>asdf</h1>
+
+    <!-- todo: do this dynamically in do.js -->
+    <script src="core.js"></script>
+    <script src="btn.js"></script>
+    <script src="poop.js"></script>
+    <script src="user.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function(){ 
+        DO.UI.initMenu([
+          USER.menuItem(),
+          POOP.menuItem(), 
+          BTN.menuItem()
+        ]); 
+      });
+    </script>
+  </body>
+</html>
